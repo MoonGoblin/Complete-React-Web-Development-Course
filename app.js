@@ -11,7 +11,7 @@ console.log("App.js is running!");
 // subtitle - ternary operator would be a great fit
 
 
-var app = {
+const app = {
     title: "Indecision App",
     subTitle: "Put your life in your computer's hands!",
     options: ["One", "Two"]
@@ -19,7 +19,7 @@ var app = {
 
 
 //JSX - JavaScript XML - a JavaScript syntax "extension" provided by REACT
-var template = (
+const template = (
 <div>
     <h1>{app.title}</h1>
     {app.subTitle && <p>{app.subTitle}</p>}
@@ -31,8 +31,7 @@ var template = (
 </div>
 );
 
-    //{(app.options && app.options.length > 0) && <p>Here are your options: {app.options}</p>}
-
+//{(app.options && app.options.length > 0) && <p>Here are your options: {app.options}</p>}
 
 // Create a templateTwo var JSX expression
 // div 
@@ -41,7 +40,7 @@ var template = (
 // p tag - Location: Your city
 // Render templateTwo instead of template
 
-var user = {
+const user = {
     name: "Andrew",
     age: 55,
     location: "Hilo, Hawaii"
@@ -57,7 +56,7 @@ function getLocation(location) {
 }
 
 
-var templateTwo = (
+const templateTwo = (
     <div>
         <h1>{user.name ? user.name : "Anonymous"}</h1> 
         {(user.age && user.age >= 18) && <p>Age: {user.age}</p>} 
@@ -65,7 +64,7 @@ var templateTwo = (
     </div>
 );
 
-var appRoot = document.getElementById("app");
+const appRoot = document.getElementById("app");
 
 //the one method we are going to use with REACTDOM
 //It takes two arguments:
