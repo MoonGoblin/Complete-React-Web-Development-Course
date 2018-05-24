@@ -31,38 +31,33 @@ const template = (
 </div>
 );
 
-//{(app.options && app.options.length > 0) && <p>Here are your options: {app.options}</p>}
-
-// Create a templateTwo var JSX expression
-// div 
-// h1 tag - your name
-// p tag - Age: your age
-// p tag - Location: Your city
-// Render templateTwo instead of template
-
-const user = {
-    name: "Andrew",
-    age: 55,
-    location: "Hilo, Hawaii"
-}
+// Challenge
+// Make button "-1" - setup minusOne function and register - log "minusOne" everytime button is clicked
+// Make reset button "reset" - setup reset function - log "reset"
 
 
-function getLocation(location) {
-    if (location) {
-        return <p>Location: {location}</p>;
-    } else {
-        return undefined;
-    }
-}
+let count = 0;
+const addOne = () => {
+    console.log("addOne");
+};
 
+const minusOne = () => {
+    console.log("minusOne");
+};
+
+const reset = () => {
+    console.log("reset");
+};
 
 const templateTwo = (
     <div>
-        <h1>{user.name ? user.name : "Anonymous"}</h1> 
-        {(user.age && user.age >= 18) && <p>Age: {user.age}</p>} 
-        {getLocation(user.location)}
+        <h1>Count: {count}</h1>
+        <button onClick={addOne}>+1</button>
+        <button onClick={minusOne}>-1</button>
+        <button onClick={reset}>reset</button>
     </div>
 );
+console.log(templateTwo);
 
 const appRoot = document.getElementById("app");
 
@@ -70,4 +65,4 @@ const appRoot = document.getElementById("app");
 //It takes two arguments:
 //JSX you want to render
 //where you'd like to render it - the DOM element.
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);
